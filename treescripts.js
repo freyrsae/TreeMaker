@@ -65,6 +65,7 @@ refreshGraph();
 
 
 function mouseclick() {
+  if (d3.event.defaultPrevented) return;
   force.stop();
   nodesCount++;
   var n = parseInt(d3.select(this).text());
